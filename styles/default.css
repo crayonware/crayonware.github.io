@@ -22,7 +22,7 @@ header {
 /* 3. Page-level main heading */
 h1 {
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
-  font-size: 2.25rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
   margin: 0 1rem;
   font-weight: 700;
 }
@@ -84,6 +84,5 @@ blockquote {
 
 /* Small screen tweak */
 @media (max-width: 480px) {
-  h1 { font-size: 1.5rem; }
   main { padding: 0.5rem; }
 }
