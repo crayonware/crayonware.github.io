@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lora:wght@400;700&display=swap');
+
+/* Personal site styles - root */
+
+/* 1. Page base */
+body {
+  background-color: #f7f8fc; /* light neutral background */
+  color: #111827; /* dark foreground for readability */
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  padding: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 2. Header */
+header {
+  background: linear-gradient(90deg,#0b3d91 0%,#1257c7 100%);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+/* 3. Header title uses a stylized serif */
+header h1 {
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 2.25rem;
+  margin: 0 1rem;
+  font-weight: 700;
+}
+
+/* 4. Main content container */
+main {
+  max-width: 900px; /* keeps lines readable on large screens */
+  margin: 0 auto; /* moves content toward center without centering text */
+  padding: 1rem;
+}
+
+/* 5. Secondary headings */
+h2 {
+  font-family: 'Lora', serif;
+  color: #0b3d91;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+/* 6. Paragraphs and lists */
+p, li {
+  font-size: 1rem; /* comfortable small-text sizing uses sans-serif */
+  color: #111827;
+}
+
+/* 7. Footer */
+footer {
+  background-color: #e9eef8;
+  color: #0b3d91;
+  padding: 0.75rem 0;
+  margin-top: 2rem;
+}
+
+/* Links and navigation */
+nav a {
+  color: #0b3d91;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+header nav a {
+  color: #fff; /* header links should show on dark header */
+}
+
+/* Images responsive */
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Blockquote styling */
+blockquote {
+  border-left: 4px solid #dfe7fb;
+  padding-left: 1rem;
+  color: #334155;
+  background: #fbfdff;
+}
+
+/* Small screen tweak */
+@media (max-width: 480px) {
+  header h1 { font-size: 1.5rem; }
+  main { padding: 0.5rem; }
+}

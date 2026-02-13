@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+/* itis3135 */
+
+body {
+  background-color: #fffaf0; /* light warm background */
+  color: #222222;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+header {
+  background: #ff6f61; /* coral header */
+  color: #fff;
+  padding: 1rem 0;
+  border-bottom: 4px solid rgba(0,0,0,0.03);
+}
+
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif; /* decorative heading */
+  font-size: 2rem;
+  margin: 0 1rem;
+  font-weight: 700;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: rgba(255,255,255,0.6);
+}
+
+h2 {
+  color: #b34234;
+  font-size: 1.35rem;
+  margin-top: 0;
+}
+
+p, li {
+  font-size: 1rem;
+}
+
+footer {
+  background: #2b2b2b;
+  color: #fff;
+  padding: 0.75rem 0;
+  margin-top: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+/* Make lists a bit more airy */
+ul, ol { padding-left: 1.25rem; }
+
+/* Make images responsive */
+figure img { max-width: 100%; height: auto; display: block; }
+
+@media (max-width: 480px) {
+  header h1 { font-size: 1.25rem; }
+  main { padding: 0.5rem; }
+}
