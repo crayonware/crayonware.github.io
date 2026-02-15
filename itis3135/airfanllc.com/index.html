@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airfan LLC | Design & Consulting</title>
+    <style>
+        /* Color Palette
+           1. #264653 (Charcoal)
+           2. #2A9D8F (Persian Green)
+           3. #E9C46A (Sandy Brown)
+           4. #F4A261 (Sandy Brown - Orange)
+           5. #E76F51 (Burnt Sienna)
+        */
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #264653; /* Dark background */
+            color: #ffffff; /* White text for contrast */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2A9D8F;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Logo styling */
+        header img {
+            height: 60px;
+            width: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        main {
+            flex: 1;
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #f0f0f0; /* Light content area for contrast */
+            color: #333; /* Dark text on light background */
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #E76F51; /* Burnt Sienna for headings */
+            border-bottom: 3px solid #E9C46A; /* Sandy Brown accent */
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        h3 {
+            color: #264653;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        /* Non-standard bullet style */
+        ul {
+            list-style: none; /* Remove default bullets */
+            padding-left: 20px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul li::before {
+            content: "✓"; /* Checkmark symbol */
+            color: #E76F51; /* Burnt Sienna */
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
+        }
+
+        /* Contact Section */
+        section {
+            background-color: #E9C46A; /* Sandy Brown background */
+            color: #264653;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            text-align: center;
+            border: 2px solid #F4A261;
+        }
+
+        section h3 {
+            margin-top: 0;
+            color: #264653;
+            border-bottom: none;
+        }
+
+        section address {
+            font-style: normal;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #264653;
+            color: #E9C46A; /* Sandy Brown text */
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            border-top: 5px solid #E76F51;
+        }
+        
+        footer a {
+            color: #F4A261;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #E76F51;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Airfan LLC</h1>
+        <img src="https://openclipart.org/image/800px/30560" alt="Airfan LLC Scissors Logo">
+    </header>
+
+    <main>
+        <h2>Home & Services</h2>
+        
+        <p>
+            Welcome to Airfan LLC, where innovation meets elegant design. We serve businesses of all sizes, crafting digital experiences that are highly functional and user-centric.
+        </p>
+
+        <h3>Why Choose Airfan LLC?</h3>
+        <ul>
+            <li>Custom tailored design solutions for every client</li>
+            <li>Focus on responsive and mobile-first development</li>
+            <li>Adherence to strict accessibility guidelines</li>
+            <li>Integration of modern web technologies</li>
+            <li>Fast and optimized performance</li>
+        </ul>
+
+        <h3>Our Commitment</h3>
+        <p>
+            We take pride in our ability to listen to our clients and understand their unique needs. Whether you are a startup looking for a brand identity or an established enterprise needing a website overhaul, Airfan LLC is equipped to deliver exceptional results.
+        </p>
+
+        <section>
+            <h3>Get In Touch</h3>
+            <address>
+                <strong>Phone:</strong> (704) 123-4567<br>
+                <strong>Email:</strong> contact@airfanllc.com<br>
+                <strong>Address:</strong> 1617 Burning Avenue, Gastonia, NC 28054
+            </address>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Page created by Airfan LLC &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
