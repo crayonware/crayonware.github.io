@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Climbing | Ayaan Irfan's Hobby</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/favicon-favicons/favicon.io/master/favicon.ico"> <!-- Fallback placeholder -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧗</text></svg>">
+    
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --bg-color: #2D3047; /* Dark slate */
+            --text-color: #E2E2E2; /* Light gray */
+            --accent-color: #F4A261; /* Vibrant orange */
+            --secondary-bg: #414559; /* Slightly lighter slate */
+            --link-color: #E9C46A; /* Yellow tone */
+            --header-bg: #1A1C29; /* Deep dark slate */
+            --font-family: 'Helvetica Neue', Arial, sans-serif;
+            --border-radius: 8px;
+        }
+
+        /* Base styling */
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover, a:focus {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        /* Layout */
+        header {
+            background-color: var(--header-bg);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        nav {
+            margin-top: 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Sections & Display Logic */
+        section {
+            display: none; /* Hide all by default */
+            background-color: var(--secondary-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        /* "What" is visible by default */
+        section.active {
+            display: block;
+        }
+
+        /* Media Elements */
+        figure {
+            margin: 20px 0;
+            text-align: center;
+            background-color: var(--header-bg);
+            padding: 15px;
+            border-radius: var(--border-radius);
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #ccc;
+        }
+
+        .ai-prompt {
+            font-style: italic;
+            font-size: 0.85em;
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--header-bg);
+            text-align: center;
+            padding: 20px;
+            border-top: 4px solid var(--accent-color);
+            margin-top: 40px;
+        }
+
+        .validations {
+            margin-top: 15px;
+        }
+
+        .validations a {
+            display: inline-block;
+            background-color: var(--secondary-bg);
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 4px;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+        
+        .validations a:hover {
+            background-color: var(--accent-color);
+            color: var(--header-bg);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rock Climbing</h1>
+        <nav>
+            <a onclick="showSection('what')">Home</a> ⛰️ 
+            <a onclick="showSection('who')">Who</a> ⛰️ 
+            <a onclick="showSection('when')">When</a> ⛰️ 
+            <a onclick="showSection('where')">Where</a> ⛰️ 
+            <a onclick="showSection('how')">How</a> ⛰️ 
+            <a onclick="showSection('why')">Why</a> ⛰️ 
+            <a onclick="showSection('ai')">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- WHAT SECTION (Default) -->
+        <section id="what" class="active">
+            <h2>What is Rock Climbing?</h2>
+            <p>Rock climbing is a physically and mentally demanding sport that involves ascending natural rock formations or artificial rock walls. The goal is to reach the summit of a formation or the endpoint of a pre-defined route without falling.</p>
+            <ul>
+                <li>Bouldering: Short, low routes without ropes.</li>
+                <li>Sport Climbing: Climbing lines protected by permanently placed anchors.</li>
+                <li>Trad Climbing: Placing temporary gear for protection.</li>
+            </ul>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="A climber scaling an indoor rock wall">
+                <figcaption>A climber scaling an mountain in the outdoors.</figcaption>
+            </figure>
+        </section>
+
+        <!-- WHO SECTION -->
+        <section id="who">
+            <h2>Who is Rock Climbing For?</h2>
+            <p>Rock climbing is an inclusive activity suitable for people of varying ages and fitness levels. While professional athletes often tackle incredibly difficult routes, many amateur enthusiasts climb purely for recreation, exercise, and social interaction.</p>
+            <p>Climbers often create tight-knit communities where safety checks and spotting build profound trust between partners.</p>
+            <figure>
+                <img src="https://images.pexels.com/photos/5311543/pexels-photo-5311543.jpeg" alt="Group of climbers on a snow mountain.">
+                <figcaption>Group of climbers on a snow mountain.</figcaption>
+            </figure>
+        </section>
+
+        <!-- WHEN SECTION -->
+        <section id="when">
+            <h2>When is the Best Time to Go?</h2>
+            <p>The ideal schedule depends heavily on whether you are climbing indoors or outdoors.</p>
+            <ul>
+                <li><strong>Spring and Fall:</strong> The best seasons for outdoor climbing, offering cool and dry conditions that provide optimal friction on the rock.</li>
+                <li><strong>Summer:</strong> Outdoor climbing often requires very early mornings or late afternoons to avoid scorching heat.</li>
+                <li><strong>Winter:</strong> Best suited for indoor gym climbing or desert destinations (like Joshua Tree or Red Rock).</li>
+            </ul>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?&auto=format&fit=crop&w=800&q=80" alt="Beautiful autumn climbing">
+                <figcaption>Climbing outdoors during the perfect crisp fall weather.</figcaption>
+            </figure>
+        </section>
+
+        <!-- WHERE SECTION -->
+        <section id="where">
+            <h2>Where Are the Best Places?</h2>
+            <p>North America is home to countless world-class rock climbing destinations spanning various types of rock, from granite to sandstone.</p>
+            <ol>
+                <li>Yosemite National Park, CA (Famous for massive granite walls).</li>
+                <li>Red River Gorge, KY (Steep, overhanging sandstone sport climbing).</li>
+                <li>Local Climbing Gyms (Accessible everywhere, great for consistent training).</li>
+            </ol>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1549221838-126dc3ebf29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Yosemite valley wall">
+                <figcaption>A stunning view of El Capitan, one of the world's most famous climbing locations.</figcaption>
+            </figure>
+        </section>
+
+        <!-- HOW SECTION -->
+        <section id="how">
+            <h2>How Do You Get Started?</h2>
+            <p>Starting rock climbing is easier than most people think, thanks to the explosion of modern climbing gyms in cities worldwide.</p>
+            <p>Here are three simple steps to start:</p>
+            <ol>
+                <li>Find a local climbing gym and rent equipment (shoes and a chalk bag).</li>
+                <li>Take an introductory "intro to bouldering" or "intro to belaying" class.</li>
+                <li>Join climbing groups or meetups to find reliable partners.</li>
+            </ol>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1739766191110-39ac95d85e51?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Climbing gear">
+                <figcaption>Essential gear: climbing shoes, harness, carabiners, and sometimes a chalk bag.</figcaption>
+            </figure>
+        </section>
+
+        <!-- WHY SECTION -->
+        <section id="why">
+            <h2>Why Do We Climb?</h2>
+            <p>People are drawn to rock climbing for a myriad of physical, mental, and social reasons. It perfectly blends dynamic movement with puzzle-solving.</p>
+            <ul>
+                <li><strong>Physical Health:</strong> Builds incredible core strength, flexibility, and endurance.</li>
+                <li><strong>Mental Focus:</strong> Demands absolute presence, pushing fear and everyday stress out of your mind.</li>
+                <li><strong>Community:</strong> Fosters deep trust and strong friendships over shared struggles and successes.</li>
+            </ul>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1604290522770-ac3c713ec81d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Climber celebrating at the top">
+                <figcaption>The immense feeling of triumph after conquering a challenging route.</figcaption>
+            </figure>
+        </section>
+
+        <!-- AI PROMPTS SECTION -->
+        <section id="ai">
+            <h2>AI Prompts Used</h2>
+            <p>This section is fully transparent about AI usage for the development of this site and content.</p>
+            <p>I used AI for the content and structure of this web page. All images were sourced by me from Unsplash and other free stock photo sites.</p>
+            <p>Here is the exact prompt I used to generate the content: Create an index page within the hobby folder that includes all the normal items our pages have had so far – do not use includes.
+THE HOBBY IS ROCK CLIMBING
+header/main/footer within the body
+
+header tag should have an h1 with the name of the hobby (rock climbing)
+
+footer tag should include validation buttons (HTML, CSS, accessibility) and a link to your design firm as you did with the course website.
+
+The page must validate with no warnings/errors (HTML, CSS, accessibility).
+
+Use an embedded stylesheet since this is all one page.
+
+Styling should follow CRAP principles.
+
+No Times New Roman, no generic blue underlined links, no plain white background, no plain black text.
+
+Color scheme must be different than your main site pages.
+
+Create sections (using section tags) that act like different “pages” for your hobby site:
+
+Who (About / About Me / Who We Are)
+
+What (Home page – loads first, explains the hobby)
+
+When (Best Times / Schedule / Seasons)
+
+Where (Best Locations / Places)
+
+How
+
+Why
+
+AI Prompts (if you used AI for code or text, show prompts here. If only images were AI-generated, include a comment in your submission that says “I only used AI for images.”)
+
+Each section should:
+
+Have an h2 heading.
+
+Contain at least three items (e.g., paragraphs, figures, tables, forms, slideshow).
+
+Include at least one figure (image + caption + italicized paragraph explaining the AI prompt used).
+
+Images must be your own, AI-generated, or open source. Keep a consistent style (e.g., all photorealistic or all cartoon).
+
+Resize large images and maintain aspect ratio to avoid long loading times.
+
+Navigation:
+
+Add links in the header/nav to switch between sections.
+
+Use CSS/JS so only the selected section is visible at a time (like a single-page app).
+
+Use a unique divider symbol (emoji or special character) different from your other pages.
+
+The What (Home) section should be the default visible page.
+
+Lastly:
+
+Add this new page to the secondary menu on your main site as “Hobby” so it’s accessible from your main site.
+
+Create a favicon for your page using a tool like https://favicon.io/ Links to an external site. or something similar of your choosing. 
+
+https://favicon.io/emoji-favicons/man-climbing
+
+let me know if you need anything from me</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ayaan Irfan — ITIS 3135</p>
+        <p>Page designed by <a href="../airfanllc.com/index.html">Airfan LLC</a></p>
+        
+            <script src="./itis3135/scripts/include.min.js"></script>
+
+    </footer>
+
+    <!-- JavaScript to toggle sections -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(function(sec) {
+                sec.classList.remove('active');
+            });
+
+            // Show target section
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            }
+        }
+
+        // Set dynamic validation links matching standard behavior
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/check/referer?uri=" + location.href);
+        document.getElementById("validation_link_accessibility").setAttribute("href", "https://wave.webaim.org/report#/" + location.href);
+    </script>
+</body>
+</html>
